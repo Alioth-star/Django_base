@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'book'  # 方案一
+    'book',  # 方案一
     # 'book.apps.BookConfig',  # 方案二
     #     理论上要注册子应用
 ]
@@ -100,10 +100,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+# 语言
+LANGUAGE_CODE = 'zh-Hans'  # 'en-us'
+# 时区
+TIME_ZONE = 'Asia/shanghai'  # 'UTC'
 
 USE_I18N = True
 
