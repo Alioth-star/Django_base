@@ -16,5 +16,16 @@ from django.http import HttpResponse
 # 我们期望用户输入 Http://127.0.0.1:8000/index 访问主页
 # 来访问视图函数
 def index(request):
+    # return HttpResponse("ok")
+    # rander 渲染模板
+    # 参数:request, template_name, context = None
+    # 请求,模板名字,context=None
 
-    return HttpResponse("ok")
+    # 模拟数据查询
+    # 将视图中的数据传给HTML模板
+    # HTML（模板）采用{{字典的key}}形式
+    context = {
+        'name': '马上双十一点击有惊喜'
+    }
+
+    return render(request, 'book/index.html', context)
