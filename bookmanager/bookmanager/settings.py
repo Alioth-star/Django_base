@@ -14,7 +14,10 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+print(__file__)
+# E:\pythonProject\Django_train\django_base\Django_base\bookmanager\bookmanager\settings.py
+# dirname()获取文件目录
+# BASE_DIR = E:\pythonProject\Django_train\django_base\Django_base\bookmanager
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -22,9 +25,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'rva-)yh1up-8x6=j(kfzf9^=2mt9^x9_r*6=!2k2$fr*8rs3wi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# 调试模式
+# 在我们开发的时候 我们需要看到更多的信息，所以要开启debug模式
+# 当我们程序上线之后 就改为False
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# 允许以什么样的形式来访问我们的项目 默认是127.0.0.1
+ALLOWED_HOSTS = ['*']  # *可以用ip也可以使用127.0.0.1
 
 # Application definition
 # 注册或者安装 子应用
@@ -116,3 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 告知系统我们的图片在哪
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
